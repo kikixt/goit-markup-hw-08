@@ -17,14 +17,19 @@
 </head>
 
 <body>
-
-
-
     <!-- Header -->
-    <header class="header">
+  <header class="header">
         <div class="container navigatoin">
+         <!--logo  -->
+            <a href="index.html" rel="_self" class="link logo">Web<span class="logo__black">Studio</span></a>
+
             <nav class="nav">
-                <a href="index.html" rel="_self" class="link logo">Web<span class="logo__black">Studio</span></a>
+                <button type="button" class="header__burger-menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
+                        <use href="./images/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                
                 <ul class="list nav-list">
                     <li class="nav__item"> <a href="index.html" class="nav-list__link--current  link ">Студія</a> </li>
                     <li class="nav__item"> <a href="portfolio.html" rel="_self"
@@ -33,14 +38,14 @@
                 </ul>
             </nav>
             <ul class="contact-list list">
-                <li class="contact__mail">
+                <li class="contact__item">
                     <a href=" mailto:info@devstudio.com" class="contact link">
                         <svg class="contact__icon" width="16" height="12">
                             <use href="./images/sprite.svg#icon-mail"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
-                <li class="contact__tel">
+                <li class="contact__item">
                     <a href="tel:+380961111111" class="contact link">
                         <svg class="contact__icon" width="10" height="15">
                             <use href="./images/sprite.svg#icon-phone"></use>
@@ -49,14 +54,16 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </header> 
+    
     <main>
 
         <!-- Hero -->
-        <section class="hero">
+        <section class="section hero">
             <div class="container">
                 <h1 class="main-tilte">Ефективні рішення для вашого бізнесу</h1>
                 <div class="main-btn">
+       <!-- modal -->
                     <button type="button" class="hero__btn" data-modal-open>Замовити послугу</button>
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
@@ -97,7 +104,7 @@
                                         <textarea class="comment__text" name="comment" id="text" rows="5"
                                             placeholder="Введіть текст"></textarea>
                                     </label>
-                                    <!-- checkbox -->
+                                    <!-- CHECKBOX -->
                                     <label class="modal__checkbox" for="checkbox">
                                         <input class="checkbox visually-hidden" type="checkbox" id="checkbox" required
                                             tabindex="-1">
@@ -121,7 +128,7 @@
         </section>
 
         <!-- Peculiarities -->
-        <section class="peculiarities">
+        <section class="section peculiarities">
             <div class="container">
                 <h2 class="visually-hidden">Особливості</h2>
                 <ul class="pec-list list">
@@ -174,25 +181,49 @@
         </section>
 
         <!--What do we do-->
-        <section class="job">
+        <section class="section job">
             <div class="container">
                 <h2 class="secondary-title">Чим ми займаємось</h2>
                 <ul class="job-list list">
                     <li class="job-list__item">
                         <div class="img-thumb">
-                            <img src="images/job-section/1.jpg" alt="hand on keyboard" width="370" height="294">
+                            <picture>
+                                <source
+                                srcset="./images/job-section/desktop/1@1x.jpg 1x, ./images/job-section/desktop/1@2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                                type="image/jpeg"
+                                />
+                                <img src="./images/job-section/desktop/1@1x.jpg" alt="hand on keyboard">
+                            </picture>
+                            <!-- <img src="images/job-section/1.jpg" alt="hand on keyboard" width="370" height="294"> -->
                             <p class="item__description">Десктопні додатки</p>
                         </div>
                     </li>
                     <li class="job-list__item">
                         <div class="img-thumb">
-                            <img src="images/job-section/2.jpg" alt="phone in hand" width="370" height="294">
+                            <picture>
+                                <source 
+                                srcset="./images/job-section/desktop/2@1x.jpg 1x, ./images/job-section/desktop/2@2x.jpg 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/jpeg" 
+                                />
+                                <img src="./images/job-section/desktop/2@1x.jpg" alt="phone in hand">
+                            </picture>
+                            <!-- <img src="images/job-section/2.jpg" alt="phone in hand" width="370" height="294"> -->
                             <p class="item__description">Мобільні додатки</p>
                         </div>
                     </li>
                     <li class="job-list__item">
                         <div class="img-thumb">
-                            <img src="images/job-section/3.jpg" alt="color palette" width="370" height="294">
+                            <picture>
+                                <source 
+                                srcset="./images/job-section/desktop/3@1x.jpg 1x, ./images/job-section/desktop/3@2x.jpg 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/jpeg" 
+                                />
+                                <img src="./images/job-section/desktop/3@1x.jpg" alt="color palette">
+                            </picture>
+                            <!-- <img src="images/job-section/3.jpg" alt="color palette" width="370" height="294"> -->
                             <p class="item__description">Дизайнерські рішення</p>
                         </div>
                     </li>
@@ -201,12 +232,30 @@
         </section>
 
         <!--Our team-->
-        <section class="team">
+        <section class="section team">
             <div class="container">
                 <h2 class="team__title secondary-title">Наша команда</h2>
                 <ul class="team-list list">
                     <li class="team__item">
-                        <img src="images/team-photo/igor.jpg" alt="Product Designer" width="270" height="260">
+                        <picture>
+                            <source 
+                            srcset="./images/team-photo/desktop/igor@1x.jpg 1x, ./images/team-photo/desktop/igor@2x.jpg 2x"
+                            media="(min-width: 1200px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/tab/igor@1x.jpg 1x, ./images/team-photo/tab/igor@2x.jpg 2x"
+                            media="(min-width: 768px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/mob/igor@1x.jpg 1x, ./images/team-photo/mob/igor@2x.jpg 2x"
+                            media="(max-width: 767px)" 
+                            type="image/jpeg" 
+                            />
+                            <img src="./images/team-photo/mob/igor@1x.jpg" alt="Product Designer">
+                        </picture>
+                        <!-- <img src="images/team-photo/igor.jpg" alt="Product Designer" width="270" height="260"> -->
                         <div class="about">
                             <h3 class="about__name">Ігор Дем'яненко</h3>
                             <p class="about__position">Product Designer</p>
@@ -248,10 +297,28 @@
                     </li>
 
                     <li class="team__item">
-                        <img src="images/team-photo/olga.jpg" alt="Frontend Developer" width="270" height="260">
+                        <picture>
+                            <source 
+                            srcset="./images/team-photo/desktop/olga@1x.jpg 1x, ./images/team-photo/desktop/olga@2x.jpg 2x"
+                            media="(min-width: 1200px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/tab/olga@1x.jpg 1x, ./images/team-photo/tab/olga@2x.jpg 2x"
+                            media="(min-width: 768px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/mob/olga@1x.jpg 1x, ./images/team-photo/mob/olga@2x.jpg 2x"
+                            media="(max-width: 767px)" 
+                            type="image/jpeg" 
+                            />
+                            <img src="./images/team-photo/mob/olga@1x.jpg" alt="Frontend Developer">
+                        </picture>
+                        <!-- <img src="images/team-photo/olga.jpg" alt="Frontend Developer" width="270" height="260"> -->
                         <div class="about">
                             <h3 class="about__name">Ольга Рєпіна</h3>
-                            <p class="about__position">Product Designer</p>
+                            <p class="about__position">Frontend Developer</p>
                             <ul class="socials list">
                                 <li class="socials__item">
                                     <a class="socials__link link" href="" target="_blank" rel="noopener noreferrer"
@@ -290,7 +357,25 @@
                     </li>
 
                     <li class="team__item">
-                        <img src="images/team-photo/mikola.jpg" alt="Marketing" width="270" height="260">
+                        <picture>
+                            <source 
+                            srcset="./images/team-photo/desktop/mikola@1x.jpg 1x, ./images/team-photo/desktop/mikola@2x.jpg 2x"
+                            media="(min-width: 1200px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/tab/mikola@1x.jpg 1x, ./images/team-photo/tab/mikola@2x.jpg 2x"
+                            media="(min-width: 768px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/mob/mikola@1x.jpg 1x, ./images/team-photo/mob/mikola@2x.jpg 2x"
+                            media="(max-width: 767px)" 
+                            type="image/jpeg" 
+                            />
+                            <img src="./images/team-photo/mob/mikola@1x.jpg" alt="Marketing">
+                        </picture>
+                        <!-- <img src="images/team-photo/mikola.jpg" alt="Marketing" width="270" height="260"> -->
                         <div class="about">
                             <h3 class="about__name">Микола Тарасов</h3>
                             <p class="about__position">Marketing</p>
@@ -332,7 +417,25 @@
                     </li>
 
                     <li class="team__item">
-                        <img src="images/team-photo/mihailo.jpg" alt="UI Designer" width="270" height="260">
+                        <picture>
+                            <source 
+                            srcset="./images/team-photo/desktop/mihailo@1x.jpg 1x, ./images/team-photo/desktop/mihailo@2x.jpg 2x"
+                            media="(min-width: 1200px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/tab/mihailo@1x.jpg 1x, ./images/team-photo/tab/mihailo@2x.jpg 2x"
+                            media="(min-width: 768px)" 
+                            type="image/jpeg" 
+                            />
+                            <source 
+                            srcset="./images/team-photo/mob/mihailo@1x.jpg 1x, ./images/team-photo/mob/mihailo@2x.jpg 2x"
+                            media="(max-width: 767px)" 
+                            type="image/jpeg" 
+                            />
+                            <img src="./images/team-photo/mob/mihailo@1x.jpg" alt="UI Designer">
+                        </picture>
+                        <!-- <img src="images/team-photo/mihailo.jpg" alt="UI Designer" width="270" height="260"> -->
                         <div class="about">
                             <h3 class="about__name">Михайло Єрмаков</h3>
                             <p class="about__position">UI Designer</p>
@@ -378,7 +481,7 @@
         </section>
 
         <!-- Regular clients -->
-        <section class="clients">
+        <section class="section clients">
             <div class="container">
                 <h2 class="secondary-title">Постійні клієнти</h2>
                 <ul class="clients-list list">
@@ -432,7 +535,7 @@
     <!--Footer-->
     <footer class="footer">
         <div class="container footer__container">
-            <div class="">
+            <div class="footer__box">
                 <a href="index.html" rel="_self" class="link logo">Web<span class="logo__white">Studio</span></a>
                 <address class="address">
                     <ul class="address-list list">
@@ -500,7 +603,56 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- mobile menu -->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="container mobile-menu__container">
+            <button type="button" class="mobile-menu__close-button  js-close-menu">
+                <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
+                    <use href="./images/sprite.svg#close-btn-mob"></use>
+                </svg>
+            </button>
+            <nav class="mobile-menu__nav">
+                <ul class="list">
+                    <li class="mobile-menu__item">
+                        <a href="./index.html" class="mobile-menu__link mobile-menu__link--current link">Студія</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="./portfolio.html" class="mobile-menu__link link">Портфоліо</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link link">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="mobile-menu__contacts list">
+                <li class="mobile-menu__item">
+                    <a href="tel:+380961111111" class="mobile-menu__phone link">+38 096 111 11 11</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="mailto:info@devstudio.com" class="mobile-menu__email link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu__socials list">
+                <li class="mobile-menu__social-item">
+                    <a href="" class="mobile-menu__social-link link">Instagram</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                    <a href="" class="mobile-menu__social-link link">Twitter</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                    <a href="" class="mobile-menu__social-link link">Facebook</a>
+                </li>
+                <li class="mobile-menu__social-item">
+                    <a href="" class="mobile-menu__social-link link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

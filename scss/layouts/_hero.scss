@@ -1,25 +1,87 @@
 .hero {
-    background-color: #2F303A;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../images/bg-hero.png);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(/images/header/mob/hero@1x.jpg);
     background-repeat: no-repeat;
+    background-color: #2F303A;
     background-position: center;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.main-tilte {
-    color: var(--primary-white-color);
+    background-size: cover;
     text-align: center;
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.36;
-    letter-spacing: 2.64px;
-    text-transform: uppercase;
-    width: 696px;
+    min-height: 400px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    padding: 118px 0px;
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            & {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+                    url(/images/header/mob/hero@2x.jpg);
+            }
+        }
+    
+        @media screen and (min-width: 768px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+                url(/images/header/tab/hero@1x.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                & {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+                        url(/images/header/tab/hero@2x.jpg);
+                }
+            }
+        }
+    
+        @media screen and (min-width: 1200px) {
+            padding: 200px 0px;
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+                url(/images/header/desktop/hero@1x.jpg);
+    
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                & {
+                    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)),
+                        url(/images/header/desktop/hero@2x.jpg);
+                }
+            }
+        }
+
+            @include mq (desktop) {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            }
+    }
+
+
+
+
+.main-tilte {    
+    color: var(--primary-white-color);
+    font-family: var(--main-font-family);
+    font-size: 26px;    
+    width: 360px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1.36; 
+    line-height: 1.61;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @include mq (desktop) {
+    font-size: 44px;
+    letter-spacing: 2.64px;
+    width: 696px;        
+    }
+
 }
 
 .main-btn {

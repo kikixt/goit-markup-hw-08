@@ -61,15 +61,25 @@
 
 
 
-// dark icon  
+// dark icon (footer) 
 
 .socials-box {
-    margin-left: 94px;
+    text-align: center;
+    
+        @media screen and (min-width: 1200px) {
+        display: flex;
+        text-align: left;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
 
     &__title {
         color: var(--primary-white-color);
         margin-top: 0px;
     }
+
 }
 
 .socials__list--dark {

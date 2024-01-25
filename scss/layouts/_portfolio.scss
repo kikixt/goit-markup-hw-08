@@ -1,6 +1,4 @@
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
 
     &__title {
         display: none
@@ -11,17 +9,26 @@
 // work grid
 
 .work {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    justify-content: center;
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: block; 
 
-    &__item {
-        flex-basis: calc((100% - 2 * 30px) / 3);
+    @include mq(tablet) {   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 440px;
+    gap: 30px;
+    
+    }
+
+    @include mq(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 440px;
+    gap: 30px;
+    
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
     }
 
     &__name {
@@ -38,12 +45,16 @@
         line-height: 2;
         letter-spacing: 1.08px;
         margin-bottom: 4px;
+        text-align: start;
     }
+
+
 }
 
 .work__link {
     color: var(--main-text-color);
     display: block;
+    width: 370px;
     transition: box-shadow var(--primary-translate);
     transform: translatey(0);
 
@@ -63,4 +74,5 @@
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.48px;
+    text-align: start;
 }

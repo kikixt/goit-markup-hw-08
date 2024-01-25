@@ -1,13 +1,14 @@
 .filter-list {
     display: flex;
-    gap: 8px;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 8px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+        @include centeredFlex;
+    }
 }
 
-.filter__item {
-    display: inline;
-    align-items: center;
-}
 
 .filter__btn {
     color: var(--main-text-color);
@@ -18,7 +19,7 @@
     line-height: 1.62;
     letter-spacing: 0.48px;
     background: #F5F4FA;
-    border: none;
+    border: 0;
     cursor: pointer;
     padding: 6px 22px;
     border-radius: 4px;
@@ -26,6 +27,10 @@
     transition: color var(--primary-translate),
     background-color var(--primary-translate),
     box-shadow var(--primary-translate);
+
+    &:first-child {
+        padding: 6px 25px;
+    }
 
     &:active
     &:focus,

@@ -11,6 +11,14 @@
     transition: transform var(--primary-translate);
     transition-duration: 250ms;
 
+    display: block;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+    bottom: -100%;
+    // padding: 63px 24px 63px 24px;
+    // opacity: 0;        
+
     &__text {
         color: var(--primary-white-color);
         font-family: var(--main-font-family);
@@ -19,6 +27,7 @@
         font-weight: 400;
         line-height: 1.55;
         letter-spacing: 0.54px;
+               
     }
 
     .work__link:hover & {

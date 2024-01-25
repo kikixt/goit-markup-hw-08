@@ -5,7 +5,14 @@
 
 .navigatoin {
     display: flex;
+    height: 60px;
     align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        height: 80px;
+    }
+
 }
 
 .nav {
@@ -14,16 +21,23 @@
 }
 
 .nav-list {
-    margin-left: 94px;
     display: flex;
+    display: none;
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 50px;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 92px;
+    }
 }
 
 .nav__item {
     position: relative;
 
-    &:not(:last-child) {
-        margin-right: 50px;
-    }
 }
 
 
@@ -36,9 +50,10 @@
     line-height: normal;
     letter-spacing: 0.28px;
     margin: 0;
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
+    display: inline-flex;
 
     transition: color var(--primary-translate);
 
@@ -81,10 +96,22 @@
 
 
 .contact-list {
-    display: flex;
-    margin-left: auto;
-    gap: 40px;
+    display: none;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        margin-left: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
 
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            margin-left: auto;
+            gap: 40px;
+        }
 }
 
 .contact {
@@ -98,20 +125,43 @@
 
     transition: color var(--primary-translate);
 
-    &__tel {
-            align-items: center;
+    @media screen and (min-width: 1200px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            font-size: 14px;
         }
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 
     &__icon {
         fill: currentColor;
-        align-items: center;
-        align-content: center;
+    @media screen and (min-width: 768px) {
+        margin-right: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
         margin-right: 10px;
     }
+
+    &__item {
+        align-items: center;
+        margin-right: 50px;
+            
+            @media screen and (min-width: 767px) and (max-width: 1199px) {
+                margin-right: 0;
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+            }
+        }
+
+
 }
+    
+
 

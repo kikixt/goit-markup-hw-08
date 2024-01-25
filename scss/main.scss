@@ -1,5 +1,6 @@
 // utils
 
+@import './utils/mixins';
 @import './utils/variables'; 
 @import './utils/visually-hidden';
 
@@ -22,6 +23,7 @@
 // layouts
 
 @import './layouts/header';
+@import './layouts/mobile-menu';
 @import './layouts/hero';
 @import './layouts/peculiarities';
 @import './layouts/job';

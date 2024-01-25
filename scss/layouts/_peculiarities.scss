@@ -1,5 +1,10 @@
 .peculiarities {
-    padding-top: 94px;
+    padding-top: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;        
+    }
+
 
     &__text {
         color: var(--primary-text-color);
@@ -7,30 +12,66 @@
         line-height: 1.71;
         letter-spacing: 0.42px;
         margin-top: 10px;
+
+
     }
 }
 
 .pec-list {
+    @include mq(mobile) {
+    display: block;
+    }
+
+    @include mq(tablet) {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    }
+    
+    @include mq(desktop) {
+    display: flex;
+    gap: 30px;
+    }
+
+
 }
 
 .peculiarities__item {
-    width: 270px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    @include mq(mobile) {
+        width: 450px;
     }
+
+    @include mq(tablet) {
+        width: 354px;
+    }
+
+    @include mq(desktop) { 
+        width: 270px;
+    }
+
 }
 
 .pec-item__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
-    height: 120px;
     border-radius: 4px;
     background-color: #F5F4FA;
     margin-bottom: 30px;
+    height: 120px;  
+      
+    @include mq(mobile) {
+        width: 100%;
+}
+
+    @include mq(tablet) {
+        width: 354px;
+    }
+
+    @include mq(desktop) {
+        width: 270px;        
+    }
 }
 
 .pec__icon {
