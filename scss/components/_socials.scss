@@ -65,6 +65,10 @@
 
 .socials-box {
     text-align: center;
+
+    @media screen and (max-width: 480px) {
+        margin-top: 60px;
+    }
     
         @media screen and (min-width: 1200px) {
         display: flex;
