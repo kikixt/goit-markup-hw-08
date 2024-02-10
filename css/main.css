@@ -318,11 +318,6 @@ address {
   /* початковій стан елемента перед анімацією */
   /* кінцевий стан елемента після анімації */
 }
-@media screen and (min-width: 479px) {
-  .modal {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
