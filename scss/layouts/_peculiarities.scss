@@ -40,6 +40,12 @@
 
     @include mq(mobile) {
         width: 450px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &:last-child {
+        margin-bottom: 60px;
+    }
     }
 
     @include mq(tablet) {
