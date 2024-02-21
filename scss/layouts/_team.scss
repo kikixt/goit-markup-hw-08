@@ -2,12 +2,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #F5F4FA;
-
-    @include mq (desktop) {
-        padding-top: 94px;
-        padding-bottom: 94px;        
-    }
-
+    
     &__title {
         margin-bottom: 30px;
     }
@@ -17,8 +12,25 @@
         box-shadow: var(--team-card-shadow);
         border-radius: 4px;
         overflow: hidden;
-        margin-bottom: 30px;
     }
+
+    @media screen and (max-width: 1199px) and (min-width: 768px) {
+        &__item:nth-child(-n+2) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include mq (desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;        
+    }
+
 
     @include mq (tablet) {
     &__item {

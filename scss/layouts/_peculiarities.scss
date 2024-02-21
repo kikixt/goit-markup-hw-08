@@ -37,22 +37,21 @@
 }
 
 .peculiarities__item {
-
-    @include mq(mobile) {
-        width: 450px;
+    width: 450px;
+    
     &:not(:last-child) {
         margin-bottom: 30px;
     }
+
     &:last-child {
         margin-bottom: 60px;
     }
-    }
 
-    @include mq(tablet) {
+    @media screen and (min-width: 768px) {
         width: 354px;
     }
 
-    @include mq(desktop) { 
+    @media screen and (min-width: 1200px) { 
         width: 270px;
     }
 
