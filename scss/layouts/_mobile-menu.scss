@@ -12,7 +12,7 @@
     background-color: transparent;
 
     fill: var(--main-text-color);
-
+    transition: fill var(--primary-translate);
 
     &:hover,
     &:focus {
@@ -62,6 +62,7 @@
     background-color: transparent;
 
     fill: var(--main-text-color);
+    transition: fill var(--primary-translate);
 
     &:hover,
     &:focus {
@@ -77,6 +78,12 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
 
+    transition: color var(--primary-translate);
+
+    @media screen and (max-width: 479px) {
+        font-size: 9vw;        
+    }
+
     &--current {
         color: var(--accent-color);
     }
@@ -89,10 +96,19 @@
 
 .mobile-menu__item {
     margin-bottom: 32px;
+
+    @media screen and (max-width: 479px) {
+        margin-bottom: 20px;
+    }
 }
 
 .mobile-menu__nav {
     margin-bottom: 302px;
+
+    @media screen and (max-width:479px) {
+        margin-bottom: 200px;
+        
+    }
 }
 
 .mobile-menu__phone {
@@ -101,6 +117,10 @@
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    @media screen and (max-width: 479px) {
+        font-size: 7vw;        
+    }
 
     &:hover,
     &:focus {
@@ -115,6 +135,10 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
 
+    @media screen and (max-width: 479px) {
+        font-size: 6vw;
+    }
+
     &:hover,
     &:focus {
         fill: var(--accent-color);
@@ -123,6 +147,7 @@
 
 .mobile-menu__contacts {
     margin-bottom: 64px;
+
 }
 
 .mobile-menu__socials {

@@ -15,7 +15,11 @@
     align-items: center;
     text-align: left;
     overflow: hidden;
-    bottom: -100%;       
+    bottom: -100%;     
+    
+    @media screen and (max-width: 479px) {
+        padding: 30px 22px;        
+    }
 
     &__text {
         color: var(--primary-white-color);
@@ -25,6 +29,10 @@
         font-weight: 400;
         line-height: 1.55;
         letter-spacing: 0.54px;
+
+        @media screen and (max-width: 479px) {
+            font-size: 12px;            
+        }
                
     }
 

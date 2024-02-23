@@ -23,7 +23,7 @@
     @include mq(desktop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 440px;
+    grid-template-rows: 404px;
     gap: 30px;
     margin-bottom: 94px ;
     }

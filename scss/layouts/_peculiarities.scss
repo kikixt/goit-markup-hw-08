@@ -31,14 +31,14 @@
     @include mq(desktop) {
     display: flex;
     gap: 30px;
+    max-height: 248px;
     }
 
 
 }
 
 .peculiarities__item {
-    width: 450px;
-    
+
     &:not(:last-child) {
         margin-bottom: 30px;
     }
@@ -53,6 +53,7 @@
 
     @media screen and (min-width: 1200px) { 
         width: 270px;
+        margin: 0;
     }
 
 }
