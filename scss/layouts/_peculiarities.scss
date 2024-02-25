@@ -18,45 +18,24 @@
 }
 
 .pec-list {
-    @include mq(mobile) {
-    display: block;
-    }
-
-    @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    }
-    
-    @include mq(desktop) {
-    display: flex;
-    gap: 30px;
-    max-height: 248px;
-    }
-
 
 }
 
 .peculiarities__item {
-
-    &:not(:last-child) {
-        margin-bottom: 30px;
+    flex-basis: 100%;
+    
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 3 * 30px) / 4);
+        }
     }
 
-    &:last-child {
-        margin-bottom: 60px;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 354px;
-    }
-
-    @media screen and (min-width: 1200px) { 
-        width: 270px;
-        margin: 0;
-    }
-
-}
 
 .pec-item__icon {
     display: flex;
