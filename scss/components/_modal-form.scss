@@ -43,10 +43,10 @@
     width: 450px;
 
     @media screen and (max-width: 479px) {
-        width: 100%;
+        width: 90%;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1199px) {
         width: 528px;
         height: 581px;
     }
@@ -113,6 +113,10 @@
         margin: 0;
         padding: 0;
         margin-bottom: 12px;
+
+        @media screen and (max-width: 479px) {
+            font-size: 18px;
+        }
     }
     
     &__label {
@@ -226,6 +230,10 @@
     font-size: 14px;
     transition: border-color var(--primary-translate);
     outline: none;
+
+    @media screen and (max-width: 479px) {
+        height: 70px;
+    }
     
     @media screen and (min-width: 480px) {
         width: 370px;
@@ -261,7 +269,15 @@
         letter-spacing: 0.42px;
         text-decoration-line: underline;
         transition-property: color var(--primary-translate);
+
+        @media screen and (max-width: 479px) {
+                font-size: 12px;
+            }
     }
+
+        @media screen and (max-width: 479px) {
+            font-size: 12px;
+        }
 }
 
 .modal__checkbox {
@@ -275,6 +291,7 @@
     @media screen and (min-width: 1200px) {
         font-size: 14px;
         line-height: 1.71;
+        margin: 16px 0 18px 0;
     }
 
 }
@@ -336,6 +353,11 @@
     cursor: pointer;
 
     transition: background-color var(--primary-translate);
+
+    @media screen and (max-width: 479px) {
+            padding: 8px 44px;
+            font-size: 12px;
+        }
 
     &:hover,
     &:active,
